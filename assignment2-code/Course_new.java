@@ -25,7 +25,7 @@ public class Course {
         return true;
     }
     //TODO Create function that checks if a course can be unenrolled based on requirements
-    boolean reqEnrolled(Student){
+    boolean reqEnrolled(Student student){
         //TODO Check if student is still enrolled in the courses in requirements
         for(Course course: requirements){
             //TODO ...
