@@ -1,0 +1,12 @@
+open terminal in intelliJ
+
+run:
+javac Draft.java
+diff <(java Draft < test.txt) expected.txt
+
+or
+javac Draft.java
+diff <(java Draft < test2.txt) expected2.txt
+
+
+Correct code should result no output from test
