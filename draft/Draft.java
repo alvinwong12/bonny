@@ -3,6 +3,11 @@ import java.util.Stack;
 
 public class Draft {
 
+	// TDDO
+	// should return boolean for style
+	// stack is miss used in this function; either do resursively or iteratively with a stack
+	// NOTE: resursive function calls (line 31) is already a stack in itself, where the stack consists of the sequences of function calls
+	// Your stack is redundant in this function
     static String isValid(String input){
         Stack<Integer> stack = new Stack<>();
 
@@ -18,6 +23,8 @@ public class Draft {
                 String game = input.substring(i + 1,position);//take string between the brackets
                 String gameWithBrackets = new String("("+game+")");
 
+                // TODO
+                // error here, why not return?
                 if (playGame(gameWithBrackets) == "f"){
                     System.out.println("INVALID");
                     //return "INVALID";
@@ -102,14 +109,16 @@ public class Draft {
         // }
 
         // TODO Delete -> for testing only
-        while(keyboard.hasNextLine()){
-            String theirGame = keyboard.nextLine();
-            boolean valid = isValid(theirGame);
-            if (valid){
-                System.out.println("VALID");
-            } else {
-                System.out.println("INVALID");
-            }
-        }
+        // once isValid function is changed to boolean return type, use bottom code to mass test
+        // see testing instructions
+        // while(keyboard.hasNextLine()){
+        //     String theirGame = keyboard.nextLine();
+        //     boolean valid = isValid(theirGame);
+        //     if (valid){
+        //         System.out.println("VALID");
+        //     } else {
+        //         System.out.println("INVALID");
+        //     }
+        // }
     }
 }
